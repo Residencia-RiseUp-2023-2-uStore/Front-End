@@ -10,6 +10,7 @@
 | **Data** | **Modificações** | **Author** |
 | --- | --- | --- | 
 | **04/09/2023** | **Foi criado o README.md** | **Gustavo** |
+| **23/09/2023** | **Foi criado o arquivo React** | **Gustavo** |
 ## 🎂 • Sites 
 
 https://www.anychart.com/
