@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+:root{
+  --cor--dourado: #FD9B28;
+  --cor--branco: #FFFFFF;
+  --cor--cinza:#1E1F21;
+  --cor--azul--marinho:#0E46C9;
+  --cor--azul--claro:#00BBFF;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+.App{
+  background-color:var(--cor--azul--marinho);
+  width: 100vw;
+  height: 100vh;
 }
