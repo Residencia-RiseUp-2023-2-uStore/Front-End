@@ -1,16 +1,31 @@
 import React from 'react'
 import './EspacoLogin.css'
-const EspacoLogin = () => {
+//Componentes 
+
+import InputType from "../InputType/InputType.jsx"
+const EspacoLogin = (props) => {
   return (
     <div className='ladoTotal'>
-        <div className="ladoEsquerdo">
-            <img src="src\assets\imgCirculos.png" alt="circulo ilustrativos" className='imgCirculos circuloDireita'/>
-            <img src="src\assets\ustoreLogo.png" alt="Logo da empresa uStore" className='logoUstore'/>
-            <img src="src\assets\imgCirculos.png" alt="circulo ilustrativos" className='imgCirculos circuloEsquerda'/>
+      <div className="ladoEsquerdo">
+        <img src="src\assets\imgCirculos.png" alt="circulo ilustrativos" className='imgCirculos circuloDireita' />
+        <img src="src\assets\ustoreLogo.png" alt="Logo da empresa uStore" className='logoUstore' />
+        <img src="src\assets\imgCirculos.png" alt="circulo ilustrativos" className='imgCirculos circuloEsquerda' />
+      </div>
+      <div className="ladoDireito">
+        <div className="infos">
+          <h2>Login</h2>
+          <InputType tipo="text" id="Login" name="Login" />
+          <InputType tipo="password" id="Senha" name="Senha" />
+          <div className="logadoSenha">
+            <div className="manterLogado">
+              <InputType tipo="checkbox" id="check" name="check" />
+              <p>Keep me logged in</p>
+            </div>
+            <p className='esqueceuASenha'>Forgot password?</p>
+          </div>
+
         </div>
-        <div className="ladoDireito">
-            
-        </div>
+      </div>
     </div>
   )
 }

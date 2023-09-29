@@ -1,67 +1,103 @@
+.ladoTotal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
 
-  .ladoTotal{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+.ladoEsquerdo {
+  width: 40%;
+  min-width: 500px;
+  height: 90%;
+  background-color: var(--cor--cinza);
+  border-radius: 5px 0px 0px 5px;
+  position: relative;
+}
+
+.ladoDireito {
+  width: 40%;
+  min-width: 500px;
+  height: 90%;
+  background-color: white;
+  border-radius: 0px 5px 5px 0px;
+  
+}
+
+.circuloDireita {
+  position: absolute;
+  right: 0;
+  max-width: 100%;
+}
+
+.circuloEsquerda {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  max-width: 100%;
+}
+
+.logoUstore {
+  position: absolute;
+  width: 100%;
+  padding: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ladoDireito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infos{
+ width: 40%;
+}
+.infos h2{
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.manterLogado{
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+.logadoSenha{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7em;
+  align-items: center;
+}
+.esqueceuASenha{
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:1200px) {
+  .ladoTotal {
     align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
+    flex-direction: column;
+    gap: 0;
   }
 
-  .ladoEsquerdo{
-    width: 40%;
-    min-width: 500px;
-    height: 90%;
-    background-color: var(--cor--cinza);
-    border-radius: 5px 0px 0px 5px ;
-    position: relative;
-  }
-  .ladoDireito{
-    width: 40%;
-    min-width: 500px;
-    height: 90%;
-    background-color: white;
-    border-radius: 0px 5px 5px 0px ;
-  }
-  .circuloDireita{
-    position: absolute;
-    right: 0;
-    max-width: 100%;
-  }
-  .circuloEsquerda{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: rotate(180deg);
-    max-width: 100%;
-  }
-  .logoUstore{
-    position: absolute;
-    width: 100%;
-    padding: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .ladoEsquerdo {
+    width: 80%;
+    height: 47%;
+    border-radius: 5px 0px 0px 5px;
+
   }
 
-  @media screen and (max-width:1200px) {
-    .ladoTotal{
-      align-items: center;
-      flex-direction: column;
-      gap:0;
-    }
-    
-    .ladoEsquerdo{
-      width: 80%;
-      height: 47%;
-      border-radius: 5px 0px 0px 5px ;
-
-    }
-    .ladoDireito{
-      width: 80%;
-      height: 47%;
-      border-radius: 0px 5px 5px 0px ;
-    }
+  .ladoDireito {
+    width: 80%;
+    height: 47%;
+    border-radius: 0px 5px 5px 0px;
   }
+
+  .infos h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+}

@@ -12,6 +12,7 @@
 | **04/09/2023** | **Feat:Foi criado o README.md** | **Gustavo** |
 | **23/09/2023** | **Feat:Foi criado o arquivo React** | **Gustavo** |
 | **25/09/2023** | **Feat:Feito o lado esquerdo do login** | **Gustavo** |
+| **25/09/2023** | **Feat:Feito iniciado a criação do lado direito do login** | **Gustavo** |
 ## 🎂 • Sites 
 
 https://www.anychart.com/
