@@ -55,37 +55,69 @@
   align-items: center;
 }
 .infos{
- width: 40%;
+ width: 50%;
+}
+.infos input[type = text],.infos input[type = password]{
+  padding: 0 5px;
+  font-size: 1.3em;
 }
 .infos h2{
   font-size: 3em;
   margin-bottom: 20px;
+  margin-left: 5px;
 }
 .manterLogado{
   display: flex;
   column-gap: 5px;
   align-items: center;
+  justify-content: center;
 }
 .logadoSenha{
   display: flex;
   justify-content: space-between;
-  font-size: 0.7em;
+  font-size: 0.9em;
   align-items: center;
+  margin-top: -10px;
+  flex-wrap: wrap;
+}
+.logadoSenha input[type = checkbox]{
+  width: 15px;
+  height: 15px;
+  
 }
 .esqueceuASenha{
   color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
+.Login{
+  margin-top: 15px;
+  width: 45%;
+  background-color: var(--cor--dourado);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: var(--cor--branco);
+  transition: 0.5s;
+  padding: 4px !important;
+  font-size: 1em;
+}
+.Login:hover{
+  background-color: var(--cor--azul--marinho);
+  transition: 0.5s;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1050px) {
   .ladoTotal {
     align-items: center;
     flex-direction: column;
     gap: 0;
   }
-
+ 
   .ladoEsquerdo {
     width: 80%;
     height: 47%;
+    min-width: 90%;
+    max-width: 95%;
     border-radius: 5px 0px 0px 5px;
 
   }
@@ -93,11 +125,16 @@
   .ladoDireito {
     width: 80%;
     height: 47%;
+    min-width: 90%;
+    max-width: 95%;
     border-radius: 0px 5px 5px 0px;
   }
 
   .infos h2{
     font-size: 2em;
     margin-bottom: 10px;
+  }
+  .circuloDireita,.circuloEsquerda{
+   width: 30%;
   }
 }

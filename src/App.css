@@ -16,7 +16,7 @@
 }
 
 .App{
-  background-color:var(--cor--azul--marinho);
   width: 100vw;
+  background-color:var(--cor--azul--marinho);
   height: 100vh;
 }
