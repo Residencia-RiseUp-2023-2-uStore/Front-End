@@ -1,0 +1,15 @@
+.form{
+    text-align: center;
+    width: 40%;
+    background-color: var(--cor--azul--claro);
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.espacoCadastro{
+    background-color: var(--cor--cinza);
+    width: 100vw;
+    height: 100vh;
+}

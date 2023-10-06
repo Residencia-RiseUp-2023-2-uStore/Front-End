@@ -16,3 +16,16 @@ input:focus{
 input[type = checkbox]{
     margin-bottom: 0;
 }
+
+.Login{
+    width: 45%;
+    background-color: var(--cor--dourado);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: var(--cor--branco);
+    transition: 0.5s;
+    padding: 4px !important;
+    font-size: 1em;
+    margin: 15px 0;
+}

@@ -6,12 +6,14 @@ import './App.css'
 
 //Componentes
 import EspacoLogin from './Componentes/EspacoLogin/EspacoLogin';
+import EspacoCadastro from './Componentes/EspacoCadastro/EspacoCadastro'
 
-
-function App() {
+function App(props) {
+  const [login] = useState("D");
+  console.log(login)
   return (
     <div className='App'>
-      <EspacoLogin />
+     {login ? <EspacoCadastro/> : <EspacoLogin/>}
     </div>
   )
 }
