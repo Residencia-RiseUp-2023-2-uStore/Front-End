@@ -13,3 +13,26 @@
     width: 100vw;
     height: 100vh;
 }
+span{
+    color: darkred;
+    font-weight: bold;
+    padding: 5px;
+}
+input{
+    margin-bottom: 0 !important;
+}
+.login{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: var(--cor--dourado);
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: 0.8s;
+    color: var(--cor--branco);
+}
+.login:hover{
+    background-color: var(--cor--azul--marinho);
+    transition: 0.8s;
+    cursor: pointer;
+}

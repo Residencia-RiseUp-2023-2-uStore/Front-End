@@ -13,7 +13,6 @@
   min-width: 500px;
   height: 100%;
   background-color: var(--cor--cinza);
-  border-radius: 5px 0px 0px 5px;
   position: relative;
 }
 
@@ -22,8 +21,6 @@
   min-width: 500px;
   height: 100%;
   background-color: white;
-  border-radius: 0px 5px 5px 0px;
-  
 }
 
 .circuloDireita {
@@ -76,7 +73,7 @@
   justify-content: space-between;
   font-size: 0.9em;
   align-items: center;
-  margin-top: -10px;
+  margin-top: 10px;
   flex-wrap: wrap;
 }
 .logadoSenha input[type = checkbox]{
@@ -92,6 +89,7 @@
 .Login:hover{
   background-color: var(--cor--azul--marinho);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 input[type = password]{
@@ -110,8 +108,6 @@ input[type = password]{
     height: 50%;
     min-width: 90%;
     max-width: 100%;
-    border-radius: 5px 0px 0px 5px;
-
   }
 
   .ladoDireito {
@@ -119,7 +115,6 @@ input[type = password]{
     height: 50%;
     min-width: 90%;
     max-width: 100%;
-    border-radius: 0px 5px 5px 0px;
   }
 
   .infos h2{

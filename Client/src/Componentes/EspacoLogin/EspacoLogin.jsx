@@ -6,10 +6,20 @@ import * as yup from "yup";
 
 import InputType from "../InputType/InputType.jsx";
 const EspacoLogin = (props) => {
-  const handleClickLogin = (values)=>{
-    console.log(values)
+  const handleClickLogin = (values) => {
+    console.log(values.email)
   }
-  const [login,setLogin] = useState("");
+  const validacaoLogin = yup.object().shape({
+    email:yup
+    .string()
+    .email("Não é um email")
+    .required("Este campo é obrigatório"),
+    password:yup
+    .string()
+    .min(8,"A senha tem que ter 8 caracteres")
+    .required("Este campo é obrigatório")
+  })
+  const [login, setLogin] = useState("");
   return (
     <div className="ladoTotal">
       <div className="ladoEsquerdo">
@@ -32,35 +42,35 @@ const EspacoLogin = (props) => {
       <div className="ladoDireito">
         <div className="infos">
           <h2>Log in</h2>
-          <Formik initialValues={{}} className = "formik" onSubmit={handleClickLogin}>
-          <Form className="loginForm">
-            <div className="loginFormGroup">
-              <Field
-                name="email"
-                className="formField"
-                placeHolder="Email"
-              ></Field>
-              <ErrorMessage component="span" name="email" className = "formError"/>
-            </div>
-            <div className="loginFormGroup">
-              <Field
-                name="password"
-                className="formField"
-                placeHolder="*********"
-              ></Field>
-              <ErrorMessage component="span" name="senha" className = "formError"/>
-            </div>
-            <div className="logadoSenha">
-            <div className="manterLogado">
-              <InputType tipo="checkbox" id="check" name="check" />
-              <p>Keep me logged in</p>
-            </div>
-            <p className="esqueceuASenha">Forgot password?</p>
-          </div>
-          <input type="submit" value="Login" className="Login"/>
-          </Form>
-        </Formik>
-        
+          <Formik initialValues={{}} className="formik" onSubmit={handleClickLogin}  validationSchema={validacaoLogin}>
+            <Form className="loginForm">
+              <div className="loginFormGroup">
+                <Field
+                  name="email"
+                  className="formField"
+                  placeHolder="Email"
+                ></Field>
+                <ErrorMessage component="span" name="email" className="formError" />
+              </div>
+              <div className="loginFormGroup">
+                <Field
+                  name="password"
+                  className="formField"
+                  placeHolder="*********"
+                ></Field>
+                <ErrorMessage component="span" name="password" className="formError" />
+              </div>
+              <div className="logadoSenha">
+                <div className="manterLogado">
+                  <InputType tipo="checkbox" id="check" name="check" />
+                  <p>Keep me logged in</p>
+                </div>
+                <p className="esqueceuASenha">Forgot password?</p>
+              </div>
+              <input type="submit" value="Login" className="Login" />
+            </Form>
+          </Formik>
+
         </div>
       </div>
     </div>

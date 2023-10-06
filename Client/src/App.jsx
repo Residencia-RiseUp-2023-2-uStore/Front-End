@@ -9,7 +9,7 @@ import EspacoLogin from './Componentes/EspacoLogin/EspacoLogin';
 import EspacoCadastro from './Componentes/EspacoCadastro/EspacoCadastro'
 
 function App(props) {
-  const [login] = useState("D");
+  const [login] = useState("");
   console.log(login)
   return (
     <div className='App'>
