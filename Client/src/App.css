@@ -18,4 +18,25 @@
 .App{
   width: 100vw;
   height: 100vh;
+  display: flex;
+  position: relative;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #888;
+}
+
+::-webkit-scrollbar-track:hover{
+  background: #555;
+}
+
+
+
