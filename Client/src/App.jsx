@@ -1,21 +1,30 @@
-//libs react
-import { useState } from 'react'
-
-//CSS
-import './App.css'
-
-//Componentes
+import React, { useState, useEffect } from 'react';
+import "./App.css";
 import EspacoLogin from './Componentes/EspacoLogin/EspacoLogin';
-import EspacoCadastro from './Componentes/EspacoCadastro/EspacoCadastro'
+import EspacoCadastro from './Componentes/EspacoCadastro/EspacoCadastro';
+import ProductCatalog from './Componentes/ProductCatalog/ProductCatalog';
 
 function App(props) {
-  const [login] = useState("");
-  console.log(login)
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    if (localStorage.getItem("email")) {
+      setUser(localStorage.getItem("email"));
+    }
+  }, []);
+
+  let verificaUser;
+  if (user) {
+   verificaUser = <ProductCatalog />;
+  } else {
+   verificaUser = <EspacoLogin />;
+  }
+
   return (
     <div className='App'>
-     {login ? <EspacoCadastro/> : <EspacoLogin/>}
+      {verificaUser}
     </div>
-  )
+  );
 }
 
 export default App;

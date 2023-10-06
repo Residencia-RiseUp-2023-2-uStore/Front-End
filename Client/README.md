@@ -16,6 +16,7 @@
 | **25/09/2023** | **Feat:Finalizada parte visual do login** | **Gustavo** |
 | **05/10/2023** | **Feat:adicionada pagina de cadastro para teste e uso da lib formik** | **Gustavo** |
 | **06/10/2023** | **Feat:Adicionada validações na pagina de login** | **Gustavo** |
+| **06/10/2023** | **test:Passando dados de uma página para outra** | **Gustavo** |
 ## 🎂 • Sites 
 
 https://www.anychart.com/

@@ -7,7 +7,10 @@ import * as yup from "yup";
 import InputType from "../InputType/InputType.jsx";
 const EspacoLogin = (props) => {
   const handleClickLogin = (values) => {
-    console.log(values.email)
+   console.log(values)
+   localStorage.setItem("email",values.email)
+   localStorage.setItem("senha",values.password);
+   window.location.reload()
   }
   const validacaoLogin = yup.object().shape({
     email:yup
