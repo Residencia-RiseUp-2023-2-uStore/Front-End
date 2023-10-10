@@ -10,23 +10,8 @@ const db = mysql.createPool({
   database: "cruddatabase",
 });
 
-/** 
- * 
-app.get("/", (req, res) => {
-    const email = "gustavorgmail.com";
-    const senha = "12345672";
-    
-    // Use placeholders na consulta SQL e passe os valores como um array
-    const SQL = "INSERT INTO usuario (email, senha) VALUES (?, ?)";
-    db.query(SQL, [email, senha], (err, result) => {
-        if (err) {
-            return res.status(500).send(err); // Retorna um erro 500 se houver um erro no banco de dados
-        }
-        res.send("Dados inseridos no banco de dados com sucesso!");
-    });
-});
 
-*/
+
 app.use(cors());
 app.use(express.json());
 
@@ -40,6 +25,18 @@ app.post("/register",(req,res)=>{
     console.log()
   }) 
 })
+app.get("/getUsers",(req,res) =>{
+  let SQL = "SELECT * FROM usuario";
+  db.query(SQL,(err,result) =>{
+    if(err){
+      console.log(err);
+    }
+    else{
+      res.send(result)
+    }
+  })
+})
+
 app.listen(3307, () => {
   console.log("Servidor rodando na porta 3347");
 });
