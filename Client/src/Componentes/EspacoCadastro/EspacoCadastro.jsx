@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useEffect} from "react";
 import "./EspacoCadastro.css";
 import InputType from "../InputType/InputType";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -29,6 +29,11 @@ function EspacoCadastro() {
     .max(50, 'O nome deve ter no máximo 50 caracteres')
     .matches(/^[a-zA-Z ]*$/, 'O nome deve conter apenas letras e espaços')
   });
+  useEffect(()=>{
+    Axios.get("http://localhost:3307/getUsers").then((response)=>{
+      console.log(response)
+    })
+  },[])
   return (
     <div className="espacoCadastro">
       <div className="form">
@@ -44,7 +49,7 @@ function EspacoCadastro() {
               <Field
                 name="name"
                 className="formField"
-                placeHolder="Nome"
+                placeholder="Nome"
                 id = "name"
                 ></Field>
               <ErrorMessage
@@ -58,7 +63,7 @@ function EspacoCadastro() {
               <Field
                 name="email"
                 className="formField"
-                placeHolder="Email"
+                placeholder="Email"
                 id = "email"
               ></Field>
               <ErrorMessage
@@ -72,7 +77,7 @@ function EspacoCadastro() {
               <Field
                 name="password"
                 className="formField"
-                placeHolder="*********"
+                placeholder="*********"
                 id = "email"
               ></Field>
               <ErrorMessage
@@ -86,7 +91,7 @@ function EspacoCadastro() {
               <Field
                 name="confirmPassword"
                 className="formField"
-                placeHolder="*********"
+                placeholder="*********"
               ></Field>
               <ErrorMessage
                 component="span"
