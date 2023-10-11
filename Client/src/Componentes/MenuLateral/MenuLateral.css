@@ -1,0 +1,46 @@
+.menuLateral{
+    background-color: var(--cor--azul--claro);
+    width: max-content;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: var(--cor--branco);
+  }
+  .imgPerfil{
+    max-width: 80px;
+    width: 100%;
+    border-radius: 100%;
+    margin: 0 auto;
+  }
+  .tipoUsuario,.name{
+    text-align: center;
+  }
+  .tipoUsuario{
+    margin-top: -10px;
+  }
+  .dashBoard{
+    display: flex;
+  }
+  .barra{
+    width: 100%;
+    height: 2px !important;
+    background-color: #848484;
+    margin :10px 0  ;
+  }
+  .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    
+  }
+  .iconDashBoard{
+    margin-top: 15px;
+  }
+  .barraBaixo{
+    margin-top: 10px;
+  }
+  span{
+    padding:0px;
+  }

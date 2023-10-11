@@ -1,4 +1,46 @@
 .divproductCatalog{
     width: 100vw;
     height: 100vh;
+    display:grid;
+    background-color: var(--cor--cinza);
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "menu-lateral infosEmpresa"
+    "menu-lateral Banner"
+    "menu-lateral Produtos"
+    ;
+}
+
+.menuLateral{
+grid-area: menu-lateral;
+}
+
+.logoUstoreProdutos{
+    max-width: 100px;
+    width:100%;
+}
+
+.infoEmpresa{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+}
+.divproductCatalog .infoEmpresa p {
+    color: #b0b0b0 !important ;
+}
+.logo{
+    width: 50%;
+}
+.infos {
+    width: 50%;
+    display: flex;
+    column-gap: 10px;
+    font-size: 0.9em;
+}
+.infos .divIcon{
+    width: 50%;
+}
+.infos .divIcon img{
+    width:30px
 }
