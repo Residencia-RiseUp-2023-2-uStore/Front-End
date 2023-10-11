@@ -1,4 +1,4 @@
-import {React,useEffect} from "react";
+import { React, useEffect } from "react";
 import "./EspacoCadastro.css";
 import InputType from "../InputType/InputType";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -6,34 +6,41 @@ import * as yup from "yup";
 import Axios from "axios";
 function EspacoCadastro() {
   const handleClickCadastro = (values) => {
-    console.log(values)
-    Axios.post("http://localhost:3307/register",{
-      name:values.name,
-      email:values.email,
-      password:values.password
-    }).then(()=>{
-      console.log((response)=>{
-        console.log(response)
-      })
+    console.log(values);
+    Axios.post("http://localhost:3307/register", {
+      name: values.name,
+      email: values.email,
+      password: values.password,
+    }).then(() => {
+      console.log((response) => {
+        console.log(response);
+      });
     });
-   
   };
   const validationCadastro = yup.object().shape({
-    email: yup.string().email("não é um email").required("Este campo é obrigatorio"),
-    password: yup.string().min(8,"a senha deve ter 8 caracteres").required("Este campo é obrigatorio"),
-    confirmPassword:yup.string().oneOf([yup.ref("password"),null],"as senhas não são iguais"),
+    email: yup
+      .string()
+      .email("não é um email")
+      .required("Este campo é obrigatorio"),
+    password: yup
+      .string()
+      .min(8, "a senha deve ter 8 caracteres")
+      .required("Este campo é obrigatorio"),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref("password"), null], "as senhas não são iguais"),
     name: yup
-    .string()
-    .required('O nome é obrigatório')
-    .min(2, 'O nome deve ter pelo menos 2 caracteres')
-    .max(50, 'O nome deve ter no máximo 50 caracteres')
-    .matches(/^[a-zA-Z ]*$/, 'O nome deve conter apenas letras e espaços')
+      .string()
+      .required("O nome é obrigatório")
+      .min(2, "O nome deve ter pelo menos 2 caracteres")
+      .max(50, "O nome deve ter no máximo 50 caracteres")
+      .matches(/^[a-zA-Z ]*$/, "O nome deve conter apenas letras e espaços"),
   });
-  useEffect(()=>{
-    Axios.get("http://localhost:3307/getUsers").then((response)=>{
-      console.log(response)
-    })
-  },[])
+  useEffect(() => {
+    Axios.get("http://localhost:3307/getUsers").then((response) => {
+      console.log(response);
+    });
+  }, []);
   return (
     <div className="espacoCadastro">
       <div className="form">
@@ -42,29 +49,29 @@ function EspacoCadastro() {
           initialValues={{}}
           onSubmit={handleClickCadastro}
           validationSchema={validationCadastro}
-          >
+        >
           <Form className="cadastroForm">
-          <h3>Nome</h3>
-          <div className="cadastroFormGroup">
+            <h3>Nome</h3>
+            <div className="cadastroFormGroup">
               <Field
                 name="name"
                 className="formField"
                 placeholder="Nome"
-                id = "name"
-                ></Field>
+                id="name"
+              ></Field>
               <ErrorMessage
                 component="span"
                 name="name"
                 className="formError"
-                />
+              />
             </div>
-                <h3>Email</h3>
+            <h3>Email</h3>
             <div className="cadastroFormGroup">
               <Field
                 name="email"
                 className="formField"
                 placeholder="Email"
-                id = "email"
+                id="email"
               ></Field>
               <ErrorMessage
                 component="span"
@@ -78,7 +85,7 @@ function EspacoCadastro() {
                 name="password"
                 className="formField"
                 placeholder="*********"
-                id = "email"
+                id="email"
               ></Field>
               <ErrorMessage
                 component="span"
@@ -99,7 +106,11 @@ function EspacoCadastro() {
                 className="formError"
               />
             </div>
-            <button type="submit" className="login" onClick={()=>handleClickCadastro()}>
+            <button
+              type="submit"
+              className="login"
+              onClick={() => handleClickCadastro()}
+            >
               Cadastrar
             </button>
           </Form>

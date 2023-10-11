@@ -3,8 +3,7 @@ import "./ProductCatalog.css";
 const ProductCatalog = props =>{
     const [usuario,setUsuario] = useState("");
    useEffect(()=>{
-    console.log(localStorage.getItem("email"))
-    setUsuario(localStorage.getItem("email"))
+    setUsuario(localStorage.getItem("Nome"))
    },[])
 
     return(

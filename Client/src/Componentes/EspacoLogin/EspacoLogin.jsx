@@ -2,15 +2,26 @@ import React, { useState } from "react";
 import "./EspacoLogin.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+import Axios from 'axios';
 //Componentes
 
 import InputType from "../InputType/InputType.jsx";
 const EspacoLogin = (props) => {
   const handleClickLogin = (values) => {
-   console.log(values)
-   localStorage.setItem("email",values.email)
-   localStorage.setItem("senha",values.password);
-   window.location.reload()
+    console.log(values)
+    Axios.post("http://localhost:3307/login",{
+      password:values.password,
+      email:values.email,
+    }).then((response)=>{
+      if(response.data[0].email == values.email && response.data[0].password == values.password ){
+        alert("os valores coincidem")
+        localStorage.setItem("Nome",response.data[0].name)
+        location.reload();
+      }
+      else{
+        alert("os valore nao coincidem")
+      }
+    })
   }
   const validacaoLogin = yup.object().shape({
     email:yup
@@ -70,7 +81,7 @@ const EspacoLogin = (props) => {
                 </div>
                 <p className="esqueceuASenha">Forgot password?</p>
               </div>
-              <input type="submit" value="Login" className="Login" />
+              <input type="submit" value="Login" className="Login" onClick={(handleClickLogin)}/>
             </Form>
           </Formik>
 

@@ -5,17 +5,17 @@ import EspacoCadastro from './Componentes/EspacoCadastro/EspacoCadastro';
 import ProductCatalog from './Componentes/ProductCatalog/ProductCatalog';
 
 function App(props) {
-  const [user, setUser] = useState("a");
+  const [user, setUser] = useState("");
 
   useEffect(() => {
-    if (localStorage.getItem("email")) {
-      setUser(localStorage.getItem("email"));
+    if (localStorage.getItem("Nome")) {
+      setUser(localStorage.getItem("Nome"));
     }
   }, []);
 
   let verificaUser;
   if (user) {
-   verificaUser = <EspacoCadastro />;
+   verificaUser = <ProductCatalog />;
   } else {
    verificaUser = <EspacoLogin />;
   }

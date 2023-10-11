@@ -19,6 +19,7 @@
 | **06/10/2023** | **test:Passando dados de uma página para outra** | **Gustavo** |
 | **09/10/2023** | **Feat:Campo de cadastro enviando os dados para o banco de dados** | **Gustavo** |
 | **09/10/2023** | **Test:Pegando os campos do banco de dados** | **Gustavo** |
+| **11/10/2023** | **Feat:Login funcionando de forma simples** | **Gustavo** |
 ## 🎂 • Sites 
 
 https://www.anychart.com/
