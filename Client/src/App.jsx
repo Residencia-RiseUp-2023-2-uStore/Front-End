@@ -6,7 +6,6 @@ import ProductCatalog from './Componentes/ProductCatalog/ProductCatalog';
 
 function App(props) {
   const [user, setUser] = useState("");
-
   useEffect(() => {
     if (localStorage.getItem("Nome")) {
       setUser(localStorage.getItem("Nome"));

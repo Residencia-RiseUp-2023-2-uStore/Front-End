@@ -21,6 +21,7 @@
 | **09/10/2023** | **Test:Pegando os campos do banco de dados** | **Gustavo** |
 | **11/10/2023** | **Feat:Login funcionando de forma simples** | **Gustavo** |
 | **11/10/2023** | **Feat:Product catalog feito e menu adicionado** | **Gustavo** |
+| **17/10/2023** | **Feat:Menu lateral adicionado a pagina de catalogo de produtos** | **Gustavo** |
 ## 🎂 • Sites 
 
 https://www.anychart.com/

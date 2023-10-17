@@ -25,7 +25,7 @@ app.post("/register",(req,res)=>{
   let SQL = "INSERT INTO usuario(name, email, password) VALUES (?,?,?)";
   db.query(SQL,[name,email,password],(err,result)=>{
     console.log()
-  }) 
+  })  
 })
 
 //Área para pegar as linhas do banco de dados
@@ -44,7 +44,6 @@ app.get("/getUsers",(req,res) =>{
 })
 
 app.post("/login",(req,res)=>{
-  let {name} = req.body;
   let {email} = req.body;
   let SQL = "SELECT * FROM usuario WHERE email = ?";
   db.query(SQL,[email],(err,result) =>{
