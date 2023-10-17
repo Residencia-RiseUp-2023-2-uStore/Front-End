@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./EspacoLogin.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
+
 //Componentes
 
 import InputType from "../InputType/InputType.jsx";
-const EspacoLogin = (props) => {
+
+const EspacoLogin = () => {
   const handleClickLogin = (values) => {
    console.log(values)
    localStorage.setItem("email",values.email)
@@ -22,6 +24,7 @@ const EspacoLogin = (props) => {
     .min(8,"A senha tem que ter 8 caracteres")
     .required("Este campo é obrigatório")
   })
+
   const [login, setLogin] = useState("");
   return (
     <div className="ladoTotal">
@@ -51,7 +54,7 @@ const EspacoLogin = (props) => {
                 <Field
                   name="email"
                   className="formField"
-                  placeHolder="Email"
+                  placeholder="Email"
                 ></Field>
                 <ErrorMessage component="span" name="email" className="formError" />
               </div>
@@ -59,7 +62,7 @@ const EspacoLogin = (props) => {
                 <Field
                   name="password"
                   className="formField"
-                  placeHolder="*********"
+                  placeholder="*********"
                 ></Field>
                 <ErrorMessage component="span" name="password" className="formError" />
               </div>
