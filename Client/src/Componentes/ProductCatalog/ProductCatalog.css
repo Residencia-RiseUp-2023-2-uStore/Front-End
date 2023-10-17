@@ -1,4 +1,76 @@
-.divproductCatalog{
-    width: 100vw;
-    height: 100vh;
+.divproductCatalog {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  background-color: var(--cor--cinza);
+}
+
+.infosEmpresa {
+  margin: 0 auto;
+}
+.infosDaEmpresa {
+  height: 100vh;
+  width: 100vw;
+}
+
+.logoUstoreProdutos {
+  max-width: 100px;
+  width: 100%;
+}
+
+.infoEmpresa {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  grid-area: infoEmpresa;
+}
+.divproductCatalog .infoEmpresa p {
+  color: #b0b0b0 !important ;
+}
+.logo {
+  width: 100%;
+  height: max-content;
+}
+.banner {
+  max-width: 100vw;
+  margin-top: 40px;
+}
+.banner img {
+  width: 100%;
+}
+.infosProdutos {
+  width: 100%;
+  display: flex;
+  column-gap: 10px;
+  font-size: 0.9em;
+}
+.infosProdutos .divIcon {
+  width: 50%;
+  height: max-content;
+}
+.infosProdutos .divIcon:nth-child(1) p {
+  width: 90% !important;
+}
+.infosProdutos .divIcon img {
+  width: 30px;
+}
+.infosProdutos .divIcon p {
+  width: 50%;
+}
+
+@media screen and (max-width: 770px) {
+  .infosProdutos .divIcon p {
+    font-size: 0.8em;
+  }
+  .infosProdutos {
+    width: 80%;
+  }
+  .logo {
+    width: 20%;
+  }
+  .infosProdutos .divIcon{
+    display: none;
+  }
+  
 }
