@@ -1,8 +1,10 @@
 import React from "react";
 import "./MenuLateral.css";
 import IconName from "../IconName/IconName";
-import ProductCatalog from "../ProductCatalog/ProductCatalog";
+import ProductCatalog from "../ProductCatalog/ProductCatalog.jsx";
+import { BrowserRouter, Routes, Route,Link} from "react-router-dom";
 import EspacoCadastro from "../EspacoCadastro/EspacoCadastro";
+import Perfil from "../Perfil/Perfil.jsx";
 const MenuLateral = (props) => {
     let contagem = 0;
   const infosUser = {
@@ -22,6 +24,7 @@ const MenuLateral = (props) => {
     }
   }
   return (
+  
     <div className="MenuLateral">
       <div className="menuLateral aberto">
         <img
@@ -50,19 +53,20 @@ const MenuLateral = (props) => {
               altImg="lala"
               textoIcon="Clientes"
               key="2"
-              link="google.com.br"
             />
           </li>
           <li>
+            <Link to = "/Perfil">
             <IconName
               className="iconeTexto"
               linkImg="https://api.iconify.design/bi/person-circle.svg?color=white"
               altImg="lala"
               textoIcon="Seu Perfil"
               key="3"
-              link="google.com.br"
             />
+            </Link>
           </li>
+      
           <li>
             <IconName
               className="iconeTexto"
@@ -70,9 +74,9 @@ const MenuLateral = (props) => {
               altImg="lala"
               textoIcon="Pedidos"
               key="4"
-              link="google.com.br"
             />
           </li>
+          <Link to = "/ProductCatalog">
           <li>
             <IconName
               className="iconeTexto"
@@ -80,9 +84,9 @@ const MenuLateral = (props) => {
               altImg="lala"
               textoIcon="Produtos"
               key=""
-              link="google.com.br"
             />
           </li>
+          </Link>
           {infosUser.tipo == "admin" ? (
             <IconName
               className="iconeTexto"
@@ -105,6 +109,7 @@ const MenuLateral = (props) => {
         onClick={handleClickIconMenu}
       />
     </div>
+ 
   );
 };
 
