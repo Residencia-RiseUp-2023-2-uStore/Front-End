@@ -1,31 +1,47 @@
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 1.2em;
+}
+input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+input:focus {
+  border-bottom: 1px solid black;
+  outline: 0;
+}
+input[type="checkbox"] {
+  margin-bottom: 0;
+}
 
-input{
-    border: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 20px;
-    width: 100%;
-    font-size: 1.2em;
+.Login {
+  width: 45%;
+  background-color: var(--cor--dourado);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  color: var(--cor--branco);
+  transition: 0.5s;
+  padding: 4px !important;
+  font-size: 1em;
+  margin: 15px 0;
 }
-input::placeholder{
-    color: rgba(0, 0, 0, 0.5);
+.Login:hover {
+  background-color: var(--cor--azul--marinho);
+  transition: 0.5s;
+  cursor: pointer;
 }
-input:focus{
-    border-bottom: 1px solid black;
-    outline: 0;
+.logadoSenha input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
 }
-input[type = checkbox]{
-    margin-bottom: 0;
+.infos input[type="text"],
+.infos input[type="password"] {
+  padding: 0 5px;
+  font-size: 1.3em;
 }
-
-.Login{
-    width: 45%;
-    background-color: var(--cor--dourado);
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    color: var(--cor--branco);
-    transition: 0.5s;
-    padding: 4px !important;
-    font-size: 1em;
-    margin: 15px 0;
+input[type="password"] {
+  margin-bottom: 0;
 }

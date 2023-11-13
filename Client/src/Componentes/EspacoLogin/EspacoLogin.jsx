@@ -3,28 +3,33 @@ import "./EspacoLogin.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
+import styled from "styled-components";
 //Componentes
 
 import InputType from "../InputType/InputType.jsx";
 const EspacoLogin = (props) => {
   const handleClickLogin = (values) => {
-    console.log(values);
+    console.log(values)
     Axios.post("http://localhost:3307/login", {
       password: values.password,
       email: values.email,
     }).then((response) => {
-      if (
-        response.data[0].email == values.email &&
-        response.data[0].password == values.password
-      ) {
-        console.log(response.data);
-        localStorage.setItem("Nome", response.data[0].name);
-        alert("eai")
-      } else {
-        document.querySelector(".formError").textContent = "Senha incorreta";
+      console.log(response.data)
+      if(response.data.lenght != 0){
+        if (
+          response.data[0].email == values.email &&
+          response.data[0].password == values.password
+        ) {
+         
+          localStorage.setItem("Nome", response.data[0].name);
+          localStorage.setItem("email",response.data[0].email)
+          location.reload()
+        } else {
+          document.querySelector(".formErro").innerHTML = "Senha incorreta";
+        }
       }
-      if (response.data == null) {
-        document.querySelector(".formError").textContent = "Email inexistente";
+      else {
+        document.querySelector(".formErro").innerHTML = "Email inexistente";
       }
     });
   };
@@ -91,7 +96,7 @@ const EspacoLogin = (props) => {
                   name="password"
                   className="formError passwordError"
                 />
-                <span className="formError"></span>
+                <span className="formErro"></span>
               </div>
               <div className="logadoSenha">
                 <div className="manterLogado">
