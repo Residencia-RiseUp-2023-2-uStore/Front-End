@@ -1,10 +1,10 @@
 import React from "react";
 import "./MenuLateral.css";
 import IconName from "../IconName/IconName";
-import ProductCatalog from "../ProductCatalog/ProductCatalog.jsx";
+import ProductCatalog from "../../Pages/ProductCatalog/ProductCatalog.jsx";
 import { BrowserRouter, Routes, Route,Link} from "react-router-dom";
 import EspacoCadastro from "../EspacoCadastro/EspacoCadastro";
-import Perfil from "../Perfil/Perfil.jsx";
+import Perfil from "../../Pages/Perfil/Perfil.jsx";
 const MenuLateral = (props) => {
     let contagem = 0;
   const infosUser = {
@@ -87,6 +87,17 @@ const MenuLateral = (props) => {
             />
           </li>
           </Link>
+
+          <li>
+            <IconName
+              className="iconeTexto"
+              linkImg="https://api.iconify.design/icon-park-outline/ad-product.svg?color=white"
+              altImg="lala"
+              textoIcon="Cadastro de Produtos"
+              key=""
+            />
+          </li>
+
           {infosUser.tipo == "admin" ? (
             <IconName
               className="iconeTexto"

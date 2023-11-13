@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Axios from "axios";
 import './Perfil.css';
-import InfosEmpresa from "../InfosEmpresa/InfosEmpresa";
-import MenuLateral from "../MenuLateral/MenuLateral";
+import InfosEmpresa from "../../Componentes/InfosEmpresa/InfosEmpresa";
+import MenuLateral from "../../Componentes/MenuLateral/MenuLateral";
 const Perfil = ()=>{
     function pegaUsers (){
         Axios.post("http://localhost:3307/login", {
@@ -25,9 +25,7 @@ const Perfil = ()=>{
     },[])        
         return(
             <div className = "perfil">
-                <div className="menu">
-                    <MenuLateral/>
-                </div>
+                <MenuLateral className="menuLateral"></MenuLateral>
                 <div className="informacoes">
                     <InfosEmpresa/>
                     <div className="infosCliente">

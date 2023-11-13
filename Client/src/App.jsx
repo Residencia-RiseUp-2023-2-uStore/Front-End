@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import "./App.css";
 import EspacoLogin from './Componentes/EspacoLogin/EspacoLogin';
 import EspacoCadastro from './Componentes/EspacoCadastro/EspacoCadastro';
-import ProductCatalog from './Componentes/ProductCatalog/ProductCatalog';
-import Perfil from './Componentes/Perfil/Perfil';
+import ProductCatalog from './Pages/ProductCatalog/ProductCatalog';
+import Perfil from './Pages/Perfil/Perfil';
 import { BrowserRouter, Routes, Route,Link} from "react-router-dom";
 function App(props) {
   const [user, setUser] = useState("");
