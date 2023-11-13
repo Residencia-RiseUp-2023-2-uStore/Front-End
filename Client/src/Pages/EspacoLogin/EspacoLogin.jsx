@@ -6,7 +6,7 @@ import Axios from "axios";
 import styled from "styled-components";
 //Componentes
 
-import InputType from "../InputType/InputType.jsx";
+import InputType from "../../Components/InputType/InputType.jsx";
 const EspacoLogin = (props) => {
   const handleClickLogin = (values) => {
     console.log(values)

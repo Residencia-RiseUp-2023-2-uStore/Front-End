@@ -1,30 +1,27 @@
 import React from "react";
 import "./MenuLateral.css";
 import IconName from "../IconName/IconName";
-import ProductCatalog from "../../Pages/ProductCatalog/ProductCatalog.jsx";
-import { BrowserRouter, Routes, Route,Link} from "react-router-dom";
-import EspacoCadastro from "../EspacoCadastro/EspacoCadastro";
-import Perfil from "../../Pages/Perfil/Perfil.jsx";
+
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import EspacoCadastro from "../../Pages/EspacoCadastro/EspacoCadastro";
 const MenuLateral = (props) => {
-    let contagem = 0;
+  let contagem = 0;
   const infosUser = {
     name: localStorage.getItem("Nome"),
-    tipo:"admin",
+    tipo: "admin",
   };
-  let handleClickIconMenu = ()=>{
+  let handleClickIconMenu = () => {
     let menuLateral = document.querySelector(".aberto");
-    
-    if(contagem %2==0){
-        menuLateral.style.display = "flex";
-        contagem++;
+
+    if (contagem % 2 == 0) {
+      menuLateral.style.display = "flex";
+      contagem++;
+    } else {
+      menuLateral.style.display = "none";
+      contagem++;
     }
-    else{
-        menuLateral.style.display = "none";
-        contagem++;    
-    }
-  }
+  };
   return (
-  
     <div className="MenuLateral">
       <div className="menuLateral aberto">
         <img
@@ -56,17 +53,17 @@ const MenuLateral = (props) => {
             />
           </li>
           <li>
-            <Link to = "/Perfil">
-            <IconName
-              className="iconeTexto"
-              linkImg="https://api.iconify.design/bi/person-circle.svg?color=white"
-              altImg="lala"
-              textoIcon="Seu Perfil"
-              key="3"
-            />
+            <Link to="/Perfil">
+              <IconName
+                className="iconeTexto"
+                linkImg="https://api.iconify.design/bi/person-circle.svg?color=white"
+                altImg="lala"
+                textoIcon="Seu Perfil"
+                key="3"
+              />
             </Link>
           </li>
-      
+
           <li>
             <IconName
               className="iconeTexto"
@@ -76,37 +73,40 @@ const MenuLateral = (props) => {
               key="4"
             />
           </li>
-          <Link to = "/ProductCatalog">
-          <li>
-            <IconName
-              className="iconeTexto"
-              linkImg="https://api.iconify.design/material-symbols/storefront-outline.svg?color=white"
-              altImg="lala"
-              textoIcon="Produtos"
-              key=""
-            />
-          </li>
+          <Link to="/ProductCatalog">
+            <li>
+              <IconName
+                className="iconeTexto"
+                linkImg="https://api.iconify.design/material-symbols/storefront-outline.svg?color=white"
+                altImg="lala"
+                textoIcon="Produtos"
+                key=""
+              />
+            </li>
           </Link>
 
-          <li>
-            <IconName
-              className="iconeTexto"
-              linkImg="https://api.iconify.design/icon-park-outline/ad-product.svg?color=white"
-              altImg="lala"
-              textoIcon="Cadastro de Produtos"
-              key=""
-            />
-          </li>
+          <Link to="/CadastroProdutos">
+            <li>
+              <IconName
+                className="iconeTexto"
+                linkImg="https://api.iconify.design/icon-park-outline/ad-product.svg?color=white"
+                altImg="lala"
+                textoIcon="Cadastro de Produtos"
+                key=""
+              />
+            </li>
+          </Link>
 
           {infosUser.tipo == "admin" ? (
-            <IconName
-              className="iconeTexto"
-              linkImg="https://api.iconify.design/mdi/register-outline.svg?color=white"
-              altImg="lala"
-              textoIcon="Cadastro"
-              key=""
-              link={<EspacoCadastro />}
-            />
+            <Link to="/EspacoCadastro">
+              <IconName
+                className="iconeTexto"
+                linkImg="https://api.iconify.design/mdi/register-outline.svg?color=white"
+                altImg="lala"
+                textoIcon="Cadastro"
+                key=""
+              />
+            </Link>
           ) : (
             ""
           )}
@@ -120,7 +120,6 @@ const MenuLateral = (props) => {
         onClick={handleClickIconMenu}
       />
     </div>
- 
   );
 };
 

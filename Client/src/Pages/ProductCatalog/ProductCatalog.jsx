@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./ProductCatalog.css";
-import MenuLateral from "../../Componentes/MenuLateral/MenuLateral.jsx";
-import Produtos from "../../Componentes/Produtos/Produtos.jsx"
-import IconName from "../../Componentes/IconName/IconName.jsx";
-import InfosEmpresa from "../../Componentes/InfosEmpresa/InfosEmpresa.jsx";
+import MenuLateral from "../../Components/MenuLateral/MenuLateral.jsx";
+import Produtos from "../../Components/Produtos/Produtos.jsx"
+import IconName from "../../Components/IconName/IconName.jsx";
+import InfosEmpresa from "../../Components/InfosEmpresa/InfosEmpresa.jsx";
 const ProductCatalog = (props) => {
   const [usuario, setUsuario] = useState("");
   useEffect(() => {

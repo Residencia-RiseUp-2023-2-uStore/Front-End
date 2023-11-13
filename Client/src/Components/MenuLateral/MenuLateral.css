@@ -1,7 +1,13 @@
 .MenuLateral{
     display: flex;
     align-items: flex-start;
-    height: 100%;
+
+}
+li a{
+  text-decoration: none;
+}
+li a:visited{
+  text-decoration: none;
 }
 .texto:visited{
   text-decoration: none !important;

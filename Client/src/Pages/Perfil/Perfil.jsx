@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Axios from "axios";
 import './Perfil.css';
-import InfosEmpresa from "../../Componentes/InfosEmpresa/InfosEmpresa";
-import MenuLateral from "../../Componentes/MenuLateral/MenuLateral";
+import InfosEmpresa from "../../Components/InfosEmpresa/InfosEmpresa";
+import MenuLateral from "../../Components/MenuLateral/MenuLateral";
 const Perfil = ()=>{
     function pegaUsers (){
         Axios.post("http://localhost:3307/login", {

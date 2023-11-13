@@ -1,0 +1,16 @@
+input[type = file]{
+position: absolute;
+top:0;
+width: 100%;
+height: 100%;
+opacity: 0;
+}
+.imagemUm,.imagemDois,.imagemTres{
+    position: relative ;
+}
+.imagemUm:hover{
+    cursor: pointer;
+}
+.foto{
+    text-align: center;
+}

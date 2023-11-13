@@ -1,0 +1,109 @@
+.cadastroProdutos {
+  height: 100% !important;
+  width: 100% !important;
+  background-color: var(--cor--cinza);
+  min-height: 100vh;
+  display: flex;
+}
+.cadastramento {
+  width: 100%;
+  padding: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 25%;
+  padding: 5px;
+  color: white;
+  
+}
+form{
+    margin-top: 20px;
+}
+
+.foto{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+input {
+  display: inline;
+  width: 25%;
+  border-radius: 3px;
+  border: none;
+  padding: 0 5px;
+}
+.descricao {
+  width: 100%;
+}
+.inputDescricao {
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+input:nth-child(1) {
+  color: red;
+}
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid black;
+  outline: 0;
+}
+.fotos {
+  width: 100%;
+}
+.foto {
+  width: 100%;
+  height: 200px;
+  min-height: 50px;
+  border-radius: 5px;
+  background-color: white;
+}
+.imagens {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.imagemUm,
+.imagemDois,
+.imagemTres {
+  width: 20%;
+}
+input[type="file"] {
+  width: 100%;
+}
+.cadastro {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  transform: translate(-50%, -50%);
+  position: relative;
+  left: 50%;
+  background-color: var(--cor--azul--marinho);
+  color: white ;
+}
+.tituloCadastro {
+  text-align: center;
+  color: white;
+}
+
+
+@media screen and (max-width:800px) {
+    label{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    .imagemUm, .imagemDois, .imagemTres {
+        width: 30%;
+    }
+}

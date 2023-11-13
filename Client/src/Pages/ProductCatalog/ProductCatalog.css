@@ -3,7 +3,6 @@
   display: flex;
   background-color: var(--cor--cinza);
 }
-
 .divproductCatalog .infoEmpresa p {
   color: #b0b0b0 !important ;
 }

@@ -1,6 +1,6 @@
 import { React, useEffect } from "react";
 import "./EspacoCadastro.css";
-import InputType from "../InputType/InputType";
+import InputType from "../../Components/InputType/InputType";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
