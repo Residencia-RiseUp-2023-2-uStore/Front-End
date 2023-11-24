@@ -28,7 +28,8 @@ const CadastroProdutos = () => {
         <InfosEmpresa />
         <h2 className="tituloCadastro">Cadastramento de produtos</h2>
         <div className="informacoesProduto">
-          <form action="">
+          /*
+          <form action="" className="cadastramentoProdutos">
             <label htmlFor="Nome">Nome do produto:</label>
             <input type="text" />
             <label htmlFor="id" className="direita">
@@ -67,6 +68,8 @@ const CadastroProdutos = () => {
             </div>
             <input type="submit" value="Cadastrar" className="cadastro" />
           </form>
+          
+           */
         </div>
       </div>
     </div>

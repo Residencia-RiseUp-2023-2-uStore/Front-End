@@ -25,7 +25,7 @@ const MenuLateral = (props) => {
     <div className="MenuLateral">
       <div className="menuLateral aberto">
         <img
-          src="https://photografos.com.br/wp-content/uploads/2020/09/fotografia-para-perfil.jpg"
+          src="https://imgs.search.brave.com/ko4Bd8wGKBvGfTdCDnc8kSkRY-xSVtd3lQ5sY1jlqR8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/MzUzOTMxNi9wdC9m/b3RvL29uZS1iZWF1/dGlmdWwtd29tYW4t/bG9va2luZy1hdC10/aGUtY2FtZXJhLWlu/LXByb2ZpbGUuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWVG/U25lVFEwOUNHeFdO/ckRqRHN6RW9MbjhT/NFVZdFNCZUtCd3Bw/U1A1YVE9"
           alt="img person"
           className="imgPerfil"
         />
@@ -43,7 +43,8 @@ const MenuLateral = (props) => {
         </div>
         <span className="barra"></span>
         <ul className="icons">
-          <li>
+        <Link to = "/Clientes">
+        <li>
             <IconName
               className="iconeTexto"
               linkImg="https://api.iconify.design/material-symbols/person.svg?color=white"
@@ -52,6 +53,7 @@ const MenuLateral = (props) => {
               key="2"
             />
           </li>
+        </Link>
           <li>
             <Link to="/Perfil">
               <IconName
@@ -64,6 +66,7 @@ const MenuLateral = (props) => {
             </Link>
           </li>
 
+          <Link to = "/Pedidos">
           <li>
             <IconName
               className="iconeTexto"
@@ -73,6 +76,7 @@ const MenuLateral = (props) => {
               key="4"
             />
           </li>
+          </Link>
           <Link to="/ProductCatalog">
             <li>
               <IconName

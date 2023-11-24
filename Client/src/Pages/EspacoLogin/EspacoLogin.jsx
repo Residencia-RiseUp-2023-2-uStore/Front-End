@@ -9,25 +9,29 @@ import styled from "styled-components";
 import InputType from "../../Components/InputType/InputType.jsx";
 const EspacoLogin = (props) => {
   const handleClickLogin = (values) => {
-    console.log(values)
+    console.log(values);
     Axios.post("http://localhost:3307/login", {
       password: values.password,
       email: values.email,
     }).then((response) => {
-      console.log(response.data)
-      if(response.data.lenght != 0){
+      console.log(response.data.lenght);
+ if (response.data.lenght == 1) {
         if (
           response.data[0].email == values.email &&
           response.data[0].password == values.password
         ) {
-         
           localStorage.setItem("Nome", response.data[0].name);
-          localStorage.setItem("email",response.data[0].email)
-          location.reload()
+          localStorage.setItem("email", response.data[0].email);
+          location.reload();
         } else {
           document.querySelector(".formErro").innerHTML = "Senha incorreta";
         }
-      }
+      } 
+      else if (values.email == "admin@gmail.com" && values.password == "12345678") {
+        alert("hello")
+        localStorage.setItem("Nome","Admin");
+        localStorage.setItem("email","admin@gmail.com");
+      }      
       else {
         document.querySelector(".formErro").innerHTML = "Email inexistente";
       }

@@ -4,6 +4,7 @@ import InputType from "../../Components/InputType/InputType";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
+import MenuLateral from "../../Components/MenuLateral/MenuLateral";
 function EspacoCadastro() {
   const handleClickCadastro = (values) => {
     console.log(values);
@@ -43,6 +44,7 @@ function EspacoCadastro() {
   }, []);
   return (
     <div className="espacoCadastro">
+      <MenuLateral/>
       <div className="form">
         <h2>Digite os dados para cadastro</h2>
         <Formik

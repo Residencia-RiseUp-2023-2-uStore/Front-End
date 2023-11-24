@@ -30,17 +30,17 @@ const Perfil = ()=>{
                     <InfosEmpresa/>
                     <div className="infosCliente">
                         <h3>Nome Completo:</h3>
-                        <p className="nome"></p>
+                        <p className="nome">Admin</p>
                         <h3>Data de nascimento:</h3>
-                        <p className="dataNascimento"></p>
+                        <p className="dataNascimento">13/09/2004</p>
                         <h3>Cpf:</h3>
-                        <p className="cpf"></p>
+                        <p className="cpf">12345678912</p>
                         <h3>Nome da rua:</h3>
-                        <p className="nomeRua"></p>
+                        <p className="nomeRua">Rua rio das claras</p>
                         <h3>UF:</h3>
-                        <p className="uf"></p>
+                        <p className="uf">PE</p>
                         <h3>Email:</h3>
-                        <p className="email"></p>
+                        <p className="email">admin@gmail.com</p>
 
 
                     </div>
