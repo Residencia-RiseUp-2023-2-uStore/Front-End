@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect ,useState} from "react";
 import Axios from "axios";
 import './Perfil.css';
 import InfosEmpresa from "../../Components/InfosEmpresa/InfosEmpresa";
 import MenuLateral from "../../Components/MenuLateral/MenuLateral";
 const Perfil = ()=>{
+    const[isAdmin,setIsAdmin] = useState(false);
     function pegaUsers (){
+        if(localStorage.getItem("isAdm")){
+            setIsAdmin(true)
+        }
         Axios.post("http://localhost:3307/login", {
             email: localStorage.getItem("email"),
           }).then((response) => {
@@ -30,7 +34,7 @@ const Perfil = ()=>{
                     <InfosEmpresa/>
                     <div className="infosCliente">
                         <h3>Nome Completo:</h3>
-                        <p className="nome">Admin</p>
+                        <p className="nome">Gustavo Rodrigues</p>
                         <h3>Data de nascimento:</h3>
                         <p className="dataNascimento">13/09/2004</p>
                         <h3>Cpf:</h3>
@@ -41,7 +45,8 @@ const Perfil = ()=>{
                         <p className="uf">PE</p>
                         <h3>Email:</h3>
                         <p className="email">admin@gmail.com</p>
-
+                        <h3>É adm?</h3>
+                        <p className="isAdm">{isAdmin ? "Sim" : "Não"}</p>
 
                     </div>
                 </div>

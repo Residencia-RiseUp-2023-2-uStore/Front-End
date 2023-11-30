@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./MenuLateral.css";
 import IconName from "../IconName/IconName";
-
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import EspacoCadastro from "../../Pages/EspacoCadastro/EspacoCadastro";
+
 const MenuLateral = (props) => {
   let contagem = 0;
-  const infosUser = {
-    name: localStorage.getItem("Nome"),
-    tipo: "admin",
-  };
+
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [nome, setNome] = useState("Gustavo");
+
+  useEffect(()=>{
+    if(localStorage.getItem("isAdm")){
+      setIsAdmin(true);
+    }
+  },[])
+
   let handleClickIconMenu = () => {
     let menuLateral = document.querySelector(".aberto");
 
-    if (contagem % 2 == 0) {
+    if (contagem % 2 === 0) {
       menuLateral.style.display = "flex";
       contagem++;
     } else {
@@ -21,6 +27,7 @@ const MenuLateral = (props) => {
       contagem++;
     }
   };
+
   return (
     <div className="MenuLateral">
       <div className="menuLateral aberto">
@@ -29,7 +36,7 @@ const MenuLateral = (props) => {
           alt="img person"
           className="imgPerfil"
         />
-        <h3 className="name">{infosUser.name}</h3>
+        <h3 className="name">{nome}</h3>
         <p className="tipoUsuario">Usuario Comum</p>
         <div className="iconDashBoard">
           <div className="dashBoard">
@@ -101,7 +108,7 @@ const MenuLateral = (props) => {
             </li>
           </Link>
 
-          {infosUser.tipo == "admin" ? (
+          {isAdmin ? (
             <Link to="/EspacoCadastro">
               <IconName
                 className="iconeTexto"

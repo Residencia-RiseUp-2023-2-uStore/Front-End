@@ -108,6 +108,13 @@ function EspacoCadastro() {
                 className="formError"
               />
             </div>
+            <div className="isAdmin">
+            <h3>É admin?</h3>
+            <select name="formfield" id="" style={{marginLeft : '10px'}}>
+              <option value="text1">Sim</option>
+              <option value="text2">Não</option>
+            </select>
+            </div>
             <button
               type="submit"
               className="login"

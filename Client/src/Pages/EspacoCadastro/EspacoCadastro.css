@@ -1,7 +1,10 @@
 .espacoCadastro{
     display: flex;
 }
-
+.isAdmin{
+    display: flex;
+    justify-content: center;
+}
 .form{
     display: flex;
     flex-direction: column;

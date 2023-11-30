@@ -17,6 +17,10 @@
   color: white;
   
 }
+.cadastramento .direita{
+  
+  text-align: right;
+}
 form{
     margin-top: 20px;
 }

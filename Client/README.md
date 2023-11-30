@@ -26,6 +26,7 @@
 | **13/11/2023** | **Feat:Organizando a pasta de pages e componentes** | **Gustavo** |
 | **13/11/2023** | **Feat:Fim da organização da pasta de pages e componentes, além do fim visual da tela de cadastro de produtos** | **Gustavo** |
 | **13/11/2023** | **Feat:Criação do login fake admin e criação das paginas de Perfil e Clientes** | **Gustavo** |
+| **30/11/2023** | **Feat:Funcionamento local** | **Gustavo** |
 ## 🎂 • Sites 
 
 https://www.anychart.com/
