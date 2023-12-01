@@ -22,6 +22,7 @@ const EspacoLogin = (props) => {
       localStorage.setItem("email", "user@gmail.com");
       window.location.reload();
     }
+    /*
     Axios.post("http://localhost:3307/login", {
       password: values.password,
       email: values.email,
@@ -49,7 +50,7 @@ const EspacoLogin = (props) => {
         document.querySelector(".formErro").innerHTML = "Email inexistente";
       }
     });
-  };
+  };*/}
   const validacaoLogin = yup.object().shape({
     email: yup
       .string()

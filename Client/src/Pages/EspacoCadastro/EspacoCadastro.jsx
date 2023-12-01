@@ -7,6 +7,7 @@ import Axios from "axios";
 import MenuLateral from "../../Components/MenuLateral/MenuLateral";
 function EspacoCadastro() {
   const handleClickCadastro = (values) => {
+    /*
     console.log(values);
     Axios.post("http://localhost:3307/register", {
       name: values.name,
@@ -16,7 +17,7 @@ function EspacoCadastro() {
       console.log((response) => {
         console.log(response);
       });
-    });
+    });*/
   };
   const validationCadastro = yup.object().shape({
     email: yup
@@ -38,9 +39,10 @@ function EspacoCadastro() {
       .matches(/^[a-zA-Z ]*$/, "O nome deve conter apenas letras e espaços"),
   });
   useEffect(() => {
+    /*
     Axios.get("http://localhost:3307/getUsers").then((response) => {
       console.log(response);
-    });
+    });*/
   }, []);
   return (
     <div className="espacoCadastro">
