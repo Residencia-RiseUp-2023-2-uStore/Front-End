@@ -8,13 +8,13 @@ const MenuLateral = (props) => {
   let contagem = 0;
 
   const [isAdmin, setIsAdmin] = useState(false);
-  const [nome, setNome] = useState("Gustavo");
+  const [nome, setNome] = useState("Julia");
 
-  useEffect(()=>{
-    if(localStorage.getItem("isAdm")){
+  useEffect(() => {
+    if (localStorage.getItem("isAdm")) {
       setIsAdmin(true);
     }
-  },[])
+  }, []);
 
   let handleClickIconMenu = () => {
     let menuLateral = document.querySelector(".aberto");
@@ -38,29 +38,40 @@ const MenuLateral = (props) => {
         />
         <h3 className="name">{nome}</h3>
         <p className="tipoUsuario">Usuario Comum</p>
+
         <div className="iconDashBoard">
-          <div className="dashBoard">
+          <a
+            href="https://ustore-dashboard-ten.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <IconName
               linkImg="https://api.iconify.design/material-symbols/dashboard.svg?color=white"
               altImg="lala"
               textoIcon="Dashboard"
               key="1"
             />
-          </div>
+          </a>
         </div>
+
         <span className="barra"></span>
         <ul className="icons">
-        <Link to = "/Clientes">
-        <li>
-            <IconName
-              className="iconeTexto"
-              linkImg="https://api.iconify.design/material-symbols/person.svg?color=white"
-              altImg="lala"
-              textoIcon="Clientes"
-              key="2"
-            />
-          </li>
-        </Link>
+          <a
+            href=" https://ustore-dashboard-ten.vercel.app/contacts"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>
+              <IconName
+                className="iconeTexto"
+                linkImg="https://api.iconify.design/material-symbols/person.svg?color=white"
+                altImg="lala"
+                textoIcon="Clientes"
+                key="2"
+              />
+            </li>
+          </a>
+
           <li>
             <Link to="/Perfil">
               <IconName
@@ -73,17 +84,22 @@ const MenuLateral = (props) => {
             </Link>
           </li>
 
-          <Link to = "/Pedidos">
-          <li>
-            <IconName
-              className="iconeTexto"
-              linkImg="https://api.iconify.design/material-symbols/list.svg?color=white"
-              altImg="lala"
-              textoIcon="Pedidos"
-              key="4"
-            />
-          </li>
-          </Link>
+          <a
+            href="https://ustore-dashboard-ten.vercel.app/invoices"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>
+              <IconName
+                className="iconeTexto"
+                linkImg="https://api.iconify.design/material-symbols/list.svg?color=white"
+                altImg="lala"
+                textoIcon="Pedidos"
+                key="4"
+              />
+            </li>
+          </a>
+
           <Link to="/ProductCatalog">
             <li>
               <IconName

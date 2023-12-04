@@ -36,6 +36,8 @@ function App(props) {
         <Route path = '/EspacoCadastro' element = {<EspacoCadastro/>}/>
         <Route path = '/Pedidos' element = {<Pedidos/>}/>
         <Route path = '/Clientes' element = {<Clientes/>}/>
+        
+        
       </Routes>
     </div>
   </BrowserRouter>
