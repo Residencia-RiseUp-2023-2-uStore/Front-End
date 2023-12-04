@@ -16,7 +16,7 @@ const ProductCatalog = (props) => {
       <div className="infosDaEmpresa">
       <InfosEmpresa/>
       <div className="banner">
-        <img src="src/assets/banner.png" alt="" className="bannerImg"/>
+        <img src="https://i.ibb.co/x389B4Q/banner.png" alt="" className="bannerImg"/>
       </div>
       <Produtos />
       </div>

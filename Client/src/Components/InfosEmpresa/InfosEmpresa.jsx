@@ -6,7 +6,7 @@ const InfosEmpresa = () => {
     <div className="infosEmpresa">
       <div className="logo">
         <img
-          src="src\assets\ustoreLogo.png"
+          src="https://i.ibb.co/hWL9xd6/ustore-Logo.png"
           alt="Logo Ustore"
           className="logoUstoreProdutos"
         />

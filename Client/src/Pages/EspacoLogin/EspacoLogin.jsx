@@ -66,17 +66,17 @@ const EspacoLogin = (props) => {
     <div className="ladoTotal">
       <div className="ladoEsquerdo">
         <img
-          src="src\assets\imgCirculos.png"
+          src="https://i.ibb.co/tzJ5bDs/img-Circulos.png"
           alt="circulo ilustrativos"
           className="imgCirculos circuloDireita"
         />
         <img
-          src="src\assets\ustoreLogo.png"
+          src="https://i.ibb.co/hWL9xd6/ustore-Logo.png"
           alt="Logo da empresa uStore"
           className="logoUstore"
         />
         <img
-          src="src\assets\imgCirculos.png"
+          src="..\src\assets\imgCirculos.png"
           alt="circulo ilustrativos"
           className="imgCirculos circuloEsquerda"
         />
