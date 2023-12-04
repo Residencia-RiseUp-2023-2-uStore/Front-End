@@ -76,7 +76,7 @@ const EspacoLogin = (props) => {
           className="logoUstore"
         />
         <img
-          src="..\src\assets\imgCirculos.png"
+          src="https://i.ibb.co/hWL9xd6/ustore-Logo.png"
           alt="circulo ilustrativos"
           className="imgCirculos circuloEsquerda"
         />
