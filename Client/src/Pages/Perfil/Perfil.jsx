@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect ,useState} from "react";
 import Axios from "axios";
 import './Perfil.css';
-import InfosEmpresa from "../InfosEmpresa/InfosEmpresa";
-import MenuLateral from "../MenuLateral/MenuLateral";
+import InfosEmpresa from "../../Components/InfosEmpresa/InfosEmpresa";
+import MenuLateral from "../../Components/MenuLateral/MenuLateral";
 const Perfil = ()=>{
+    const[isAdmin,setIsAdmin] = useState(false);
     function pegaUsers (){
+        if(localStorage.getItem("isAdm")){
+            setIsAdmin(true)
+        }
         Axios.post("http://localhost:3307/login", {
             email: localStorage.getItem("email"),
           }).then((response) => {
@@ -25,25 +29,24 @@ const Perfil = ()=>{
     },[])        
         return(
             <div className = "perfil">
-                <div className="menu">
-                    <MenuLateral/>
-                </div>
+                <MenuLateral className="menuLateral"></MenuLateral>
                 <div className="informacoes">
                     <InfosEmpresa/>
                     <div className="infosCliente">
                         <h3>Nome Completo:</h3>
-                        <p className="nome"></p>
+                        <p className="nome">Gustavo Rodrigues</p>
                         <h3>Data de nascimento:</h3>
-                        <p className="dataNascimento"></p>
+                        <p className="dataNascimento">13/09/2004</p>
                         <h3>Cpf:</h3>
-                        <p className="cpf"></p>
+                        <p className="cpf">12345678912</p>
                         <h3>Nome da rua:</h3>
-                        <p className="nomeRua"></p>
+                        <p className="nomeRua">Rua rio das claras</p>
                         <h3>UF:</h3>
-                        <p className="uf"></p>
+                        <p className="uf">PE</p>
                         <h3>Email:</h3>
-                        <p className="email"></p>
-
+                        <p className="email">admin@gmail.com</p>
+                        <h3>É adm?</h3>
+                        <p className="isAdm">{isAdmin ? "Sim" : "Não"}</p>
 
                     </div>
                 </div>

@@ -5,7 +5,6 @@ const StyledIconName = styled.a`
   display: flex;
   column-gap: 3px;
   align-items: center;
-  text-decoration: none;
 `;
 const Icon = styled.img`
   width: 22px;

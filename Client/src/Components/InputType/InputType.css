@@ -1,18 +1,18 @@
-input {
+ input {
   border: none;
   border-bottom: 1px solid black;
   margin-bottom: 20px;
   width: 100%;
   font-size: 1.2em;
 }
-input::placeholder {
+ input::placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
-input:focus {
+.ladoDireito input:focus {
   border-bottom: 1px solid black;
   outline: 0;
 }
-input[type="checkbox"] {
+.ladoDireito input[type="checkbox"] {
   margin-bottom: 0;
 }
 

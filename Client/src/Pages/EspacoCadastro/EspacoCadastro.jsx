@@ -1,11 +1,13 @@
 import { React, useEffect } from "react";
 import "./EspacoCadastro.css";
-import InputType from "../InputType/InputType";
+import InputType from "../../Components/InputType/InputType";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
+import MenuLateral from "../../Components/MenuLateral/MenuLateral";
 function EspacoCadastro() {
   const handleClickCadastro = (values) => {
+    /*
     console.log(values);
     Axios.post("http://localhost:3307/register", {
       name: values.name,
@@ -15,7 +17,7 @@ function EspacoCadastro() {
       console.log((response) => {
         console.log(response);
       });
-    });
+    });*/
   };
   const validationCadastro = yup.object().shape({
     email: yup
@@ -37,12 +39,14 @@ function EspacoCadastro() {
       .matches(/^[a-zA-Z ]*$/, "O nome deve conter apenas letras e espaços"),
   });
   useEffect(() => {
+    /*
     Axios.get("http://localhost:3307/getUsers").then((response) => {
       console.log(response);
-    });
+    });*/
   }, []);
   return (
     <div className="espacoCadastro">
+      <MenuLateral/>
       <div className="form">
         <h2>Digite os dados para cadastro</h2>
         <Formik
@@ -105,6 +109,13 @@ function EspacoCadastro() {
                 name="confirmPassword"
                 className="formError"
               />
+            </div>
+            <div className="isAdmin">
+            <h3>É admin?</h3>
+            <select name="formfield" id="" style={{marginLeft : '10px'}}>
+              <option value="text1">Sim</option>
+              <option value="text2">Não</option>
+            </select>
             </div>
             <button
               type="submit"
